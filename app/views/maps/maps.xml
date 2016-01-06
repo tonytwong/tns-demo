@@ -1,0 +1,13 @@
+<Page loaded="loaded" xmlns="http://www.nativescript.org/tns.xsd" xmlns:maps="nativescript-google-maps-sdk">
+	<Page.actionBar>
+    	<ActionBar title="Find store "></ActionBar>
+	</Page.actionBar>
+    <GridLayout rows="auto, auto, *" columns="*,*">
+    	<Label text="{{ latitude }}" row="0" col="0" />
+    	<Label text="{{ longitude }}" row="0" col="1" />
+    	<StackLayout orientation="vertical" row="1" colSpan="2" >
+   			<Slider id="sliderZoom" value="{{ zoom }}" />
+ 		</StackLayout>
+       <maps:mapView latitude="{{ latitude }}" longitude="{{ longitude }}" zoom="{{ zoom }}" mapReady="OnMapReady" colSpan="2" row="2" />
+    </GridLayout>
+</Page>

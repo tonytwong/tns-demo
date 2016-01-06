@@ -1,0 +1,16 @@
+<Page loaded="loaded">
+	<Page.actionBar>
+    <ActionBar title="Sign in"></ActionBar>
+	</Page.actionBar>
+	<ScrollView>
+	<StackLayout orientation="vertical">
+		<Image src="res://logo" stretch="none" horizontalAlignment="center" />
+	  <TextField id="email_address" text="{{ user.email }}" hint="Email Address" keyboardType="email" />
+		<TextField secure="true" text="{{ user.password }}" hint="Password" />
+		<ActivityIndicator busy="{{ isLoading }}"/>
+		<Button text="Sign in" tap="signIn" />
+		<Button text="Sign up for Groceries" cssClass="link" tap="register" />
+		<Button text="Find store" cssClass="link" tap="maps" />
+	</StackLayout>
+	</ScrollView>
+</Page>
